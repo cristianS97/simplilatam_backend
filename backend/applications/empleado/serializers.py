@@ -12,3 +12,8 @@ class EmpleadoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Empleado
         fields = ('__all__')
+
+class OnlyEmpleadoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Empleado
+        fields = ('id', 'rut', 'nombre')

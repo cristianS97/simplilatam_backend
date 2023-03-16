@@ -17,3 +17,8 @@ class OnlyEmpresaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Empresa
         fields = ('id', 'rut', 'nombre')
+
+class CreaEmpresaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Empresa
+        fields = '__all__'

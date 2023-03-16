@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.generics import ListAPIView, CreateAPIView, RetrieveAPIView
 from .models import Empresa
-from .serializers import EmpresaSerializer, OnlyEmpresaSerializer
+from .serializers import EmpresaSerializer, OnlyEmpresaSerializer, CreaEmpresaSerializer
 
 # Create your views here.
 class EmpresaListApiView(ListAPIView):
@@ -11,7 +11,7 @@ class EmpresaListApiView(ListAPIView):
         return Empresa.objects.all()
 
 class EmpresaCreateApiView(CreateAPIView):
-    serializer_class = OnlyEmpresaSerializer
+    serializer_class = CreaEmpresaSerializer
 
 class EmpresaDetailListApiView(RetrieveAPIView):
     serializer_class = EmpresaSerializer
