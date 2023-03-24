@@ -7,6 +7,7 @@ Backend de la prueba
 1. [Descripción del proyecto](#informacion-general)
 2. [Tecnologías usadas](#tecnologias)
 3. [Aplicaciones](#aplicaciones)
+4. [Docker](#docker)
 
 ## Información general
 ***
@@ -39,3 +40,7 @@ Lista de tecnologías utilizadas en el proyecto:
 ## Aplicaciones
 1. empleado: Aplicación con las operaciones de lectura y creación de empleados de la API
 2. empresa: Aplicación con las operaciones de lectura y creación de empresas de la API
+
+## Docker
+1. Crear imagen: docker build -t django-backend-simplilatam .
+2. Correr imagen: docker run --name backend -p 8000:8000 -d django-backend-simplilatam
